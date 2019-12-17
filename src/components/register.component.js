@@ -25,7 +25,7 @@ export default class Login extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        axios.post(this.API_URL + '/register', {
+        axios.post(process.env.REACT_APP_TEST + '/register', {
             username: this.state.username,
             firstName: this.state.firstName,
             lastName: this.state.lastName,

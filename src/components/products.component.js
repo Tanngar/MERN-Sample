@@ -15,13 +15,13 @@ export default class Products extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.API_URL)
+        axios.get(process.env.REACT_APP_TEST+'/reviews/')
             .then(res => this.setState({reviews: res.data}))
             .catch((error) => {
                 console.log(error);
             });
 
-        axios.get(process.env.API_URL)
+        axios.get(process.env.REACT_APP_TEST+'/products/')
             .then(res => this.setState({products: res.data}))
             .catch((error) => {
                 console.log(error);

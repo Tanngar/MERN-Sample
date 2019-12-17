@@ -25,7 +25,7 @@ export default class AddReview extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        axios.post(process.env.API_URL + this.state.productId + '/add-review', {
+        axios.post(process.env.REACT_APP_TEST + this.state.productId + '/add-review', {
             heading: this.state.heading,
             body: this.state.body,
             author: this.state.author,
