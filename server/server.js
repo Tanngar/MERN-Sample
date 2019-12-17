@@ -23,19 +23,19 @@ connection.once('open', () => {
     console.log('MongoDB database connection established successfully')
 });
 
-const registerRouter = require('./server/routes/register');
+const registerRouter = require('./routes/register');
 app.use('/register', registerRouter);
 
-const loginRouter = require('./server/routes/login');
+const loginRouter = require('./routes/login');
 app.use('/login', loginRouter);
 
-const usersRouter = require('./server/routes/users');
+const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
-const productsRouter = require('./server/routes/products');
+const productsRouter = require('./routes/products');
 app.use('/products', productsRouter);
 
-const reviewsRouter = require('./server/routes/reviews');
+const reviewsRouter = require('./routes/reviews');
 app.use('/reviews', reviewsRouter);
 
 if(process.env.NODE_ENV === 'production') {
