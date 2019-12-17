@@ -18,13 +18,13 @@ export default class Products extends Component {
     }
 
     componentDidMount() {
-        axios.get(this.API_URL+'/reviews/')
+        axios.get(this.API_URL + '/reviews/')
             .then(res => this.setState({reviews: res.data}))
             .catch((error) => {
                 console.log(error);
             });
 
-        axios.get(this.API_URL+'/products/')
+        axios.get(this.API_URL + '/products/')
             .then(res => this.setState({products: res.data}))
             .catch((error) => {
                 console.log(error);
@@ -35,7 +35,7 @@ export default class Products extends Component {
         return this.state.products.map(product => {
             let reviewsCount;
 
-            reviewsCount =  this.state.reviews.filter((review) => {
+            reviewsCount = this.state.reviews.filter((review) => {
                 return review.productId === product._id
             }).length;
 
