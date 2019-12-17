@@ -31,7 +31,7 @@ export default class Login extends Component {
     onSubmit(e) {
         e.preventDefault();
 
-        axios.post(process.env.REACT_APP_TEST+'/login', {
+        axios.post(process.env.REACT_APP_TEST+'http://localhost:3000/login', {
             username: this.state.username,
             password: this.state.password
         })

@@ -4,8 +4,11 @@ import {Link} from 'react-router-dom';
 import ProductRow from './productRow.component';
 
 export default class Products extends Component {
+    API_URL = process.env.REACT_APP_TEST;
+
     constructor(props) {
         super(props);
+
 
         this.state = {
             products: [],
@@ -15,13 +18,13 @@ export default class Products extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.REACT_APP_TEST+'/reviews/')
+        axios.get(this.API_URL+'/reviews/')
             .then(res => this.setState({reviews: res.data}))
             .catch((error) => {
                 console.log(error);
             });
 
-        axios.get(process.env.REACT_APP_TEST+'/products/')
+        axios.get(this.API_URL+'/products/')
             .then(res => this.setState({products: res.data}))
             .catch((error) => {
                 console.log(error);
