@@ -1,0 +1,335 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  background: #DAE1E7;
+  color: #E7FFFE;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+}
+
+#root {
+  padding-bottom: 64px;
+}
+
+a {
+  text-decoration: none;
+  color: #E7FFFE;
+}
+
+.button {
+  font-size: 1rems;
+  letter-spacing: 4px;
+  border: none;
+  padding: 16px;
+  text-align: center;
+  background: #1A4971;
+  color: #EFF8FF;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h1 {
+  margin-bottom: 16px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1A4971;
+}
+
+h2 {
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1A4971;
+}
+
+h3 {
+  margin-bottom: 16px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #1A4971;
+}
+
+p {
+  margin-bottom: 16px;
+  color: #1A4971;
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+header {
+  width: 100%;
+  background: #1A4971;
+  height: 128px;
+}
+
+hr {
+  margin-top: 24px;
+  border-top: 3px solid #1A4971;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #1A4971;
+  height: 64px;
+}
+
+span {
+  color: #1A4971;
+}
+
+.navigation {
+  width: 640px;
+  margin: 0 auto;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.navigation ul li {
+  white-space: nowrap;
+  line-height: 128px;
+  height: 128px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: inline;
+  padding: 0 32px;
+}
+
+main {
+  margin: 48px auto;
+  width: 640px;
+}
+
+form {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px;
+  background: #EFF8FF;
+}
+
+form .button {
+  width: 100%;
+}
+
+form .alert {
+  margin-bottom: 16px;
+}
+
+.input-field {
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  width: 100%;
+  border: none;
+  padding: 8px;
+  background: #9FC7E5;
+  color: #1A4971;
+}
+
+.input-field::placeholder {
+  color: #1A4971;
+}
+
+.products-table {
+  text-align: left;
+  width: 100%;
+}
+
+.products-table th {
+  padding: 16px;
+  background: #1A4971;
+  font-weight: 700;
+}
+
+.products-table td {
+  padding: 16px;
+  background: #EFF8FF;
+  color: #1A4971;
+}
+
+.products-table a {
+  padding: 16px;
+  color: #1A4971;
+  display: block;
+}
+
+section {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 32px;
+  background: #EFF8FF;
+}
+
+.product-information {
+  margin-bottom: 64px;
+}
+
+.product-reviews .alert {
+  margin-top: 16px;
+}
+
+.review {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #9FC7E5;
+}
+
+.review:last-child {
+  margin-bottom: 0px;
+}
+
+.author {
+  margin-right: 16px;
+}
+
+.alert {
+  font-size: 1rem;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px 0px;
+}
+
+.alert-danger {
+  color: red;
+}
+
+.alert-notification {
+  color: #606F7B;
+}
+
+.action-panel {
+  margin-top: 16px;
+}
+
+.action-panel span {
+  margin-right: 8px;
+}
+
+/* ASP.net only */
+.field-validation-error {
+  display: block;
+  color: red;
+  padding: 8px 0;
+}
+
+@media only screen and (max-width: 425px) {
+  header {
+    height: 64px;
+    width: 425px;
+  }
+
+  .navigation {
+    font-size: 1rem;
+    width: 320px;
+  }
+
+  .navigation ul {
+    height: 64px;
+  }
+
+  .navigation ul li {
+    white-space: nowrap;
+    line-height: 64px;
+    height: 64px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline;
+    padding: 0 32px;
+  }
+
+  main {
+    box-sizing: border-box;
+    padding: 16px;
+    margin: 0;
+    width: 425px;
+  }
+
+  .products-table {
+    text-align: left;
+    width: 100%;
+  }
+
+  .products-table th, .products-table td, .products-table a {
+    padding: 8px;
+  }
+
+  footer {
+    height: 64px;
+    width: 425px;
+  }
+
+}
+
+@media only screen and (min-width: 500px) {
+  .products-table {
+    white-space: nowrap;
+  }
+}
