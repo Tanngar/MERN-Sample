@@ -21,7 +21,7 @@ export default class DeleteReview extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        axios.delete(process.env.REACT_APP_API_UR + this.state.productId + '/delete-review/' + this.state.reviewId)
+        axios.delete(process.env.API_URL + this.state.productId + '/delete-review/' + this.state.reviewId)
             .then((res) => {
                 if (res.data.msg) {
                     this.setState({msg: res.data.msg})

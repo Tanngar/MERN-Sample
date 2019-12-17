@@ -25,7 +25,7 @@ export default class MyReviewsComponent extends Component {
         if (!this.Auth.isLoggedIn()) {
             this.props.history.replace("/login")
         } else {
-            axios.get(process.env.REACT_APP_API_UR)
+            axios.get(process.env.API_URL)
                 .then(res => {
                     this.setState({products: res.data})
                 })
@@ -33,7 +33,7 @@ export default class MyReviewsComponent extends Component {
                     console.log(error);
                 });
 
-            axios.get(process.env.REACT_APP_API_UR + localStorage.getItem('userId'))
+            axios.get(process.env.API_URL + localStorage.getItem('userId'))
                 .then(res => {
                     this.setState({reviews: res.data})
                 })

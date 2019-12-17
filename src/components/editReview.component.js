@@ -35,7 +35,7 @@ export default class AddReview extends Component {
             })
         }
 
-        axios.get(process.env.REACT_APP_API_UR + this.state.reviewId)
+        axios.get(process.env.API_URL + this.state.reviewId)
             .then(res => {
                 this.setState({
                     heading: res.data.heading,
@@ -56,7 +56,7 @@ export default class AddReview extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        axios.put(process.env.REACT_APP_API_UR + this.state.productId + '/edit-review/' + this.state.reviewId, {
+        axios.put(process.env.API_URL + this.state.productId + '/edit-review/' + this.state.reviewId, {
             heading: this.state.heading,
             body: this.state.body,
             author: this.state.author,

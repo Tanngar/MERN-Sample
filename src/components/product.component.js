@@ -15,13 +15,13 @@ export default class Product extends Component {
     }
 
     componentDidMount() {
-        axios.get(process.env.REACT_APP_API_UR + this.state.productId)
+        axios.get(process.env.API_URL + this.state.productId)
             .then(res => this.setState({product: res.data}))
             .catch((error) => {
                 console.log(error);
             })
 
-        axios.get(process.env.REACT_APP_API_UR + this.state.productId)
+        axios.get(process.env.API_URL + this.state.productId)
             .then(res => this.setState({reviews: res.data}))
             .catch((error) => {
                 console.log(error);

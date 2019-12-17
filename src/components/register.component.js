@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 const axios = require('axios').default;
 
 export default class Login extends Component {
-    API_URL = process.env.REACT_APP_API_UR;
+    API_URL = process.env.API_URL;
 
     constructor(props) {
         super(props);
